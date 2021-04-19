@@ -67,8 +67,7 @@ def main():
         # Actuate solenoid
         if command == "U" or command == "D":
             actuateSolenoid(leonardo, command)
-        elif command == "E":
-            actuateSolenoid(leonardo, "U") # Initialize solenoid
+        elif command == "AUTO":
             while True:
                 transmit(motherboard, "G1 X30 Y150")
                 time.sleep(5)
